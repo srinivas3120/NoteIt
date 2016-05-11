@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">
+
+<LinearLayout 
+    android:id="@+id/mainLinLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/mainTitleLinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/dateRelLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal">
+    		<TextView
+            android:id="@+id/createdDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:text="created"
+            android:textAppearance="?android:attr/textAppearanceSmall" >
+        	</TextView>
+
+        	<TextView
+            android:id="@+id/modified_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:text="modified"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+        
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/titleLinLayout">
+
+        <TextView
+            android:id="@+id/noteTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title : "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/noteTitle"
+            android:paddingLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:background="@drawable/edit">
+        </EditText>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/noteTagLinLayout"
+        android:layout_width="224dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" 
+        android:paddingTop="5dp">
+
+	    <Spinner
+	        android:id="@+id/noteTags"
+	        android:layout_width="108dp"
+	        android:layout_height="33dp"
+	        android:layout_alignParentRight="true"
+	        android:gravity="left"
+	        android:spinnerMode="dropdown"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        style="@style/spinner_style"/>
+
+	    <TextView
+	        android:id="@+id/noteTagsText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="33dp"
+	        android:layout_toLeftOf="@+id/noteTags"
+	        android:gravity="center"
+	        android:text="Tag It : "
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	</RelativeLayout>
+
+    </LinearLayout>
+	
+	<LinearLayout
+	    android:id="@+id/mainRemindLinLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+	    android:orientation="vertical"
+	    android:padding="5dp" >
+
+	<Switch
+	    android:id="@+id/remindMe"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Remind me" />
+
+	
+
+	<!--<ListView
+	    android:id="@+id/textViewNotification"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent" >-->
+
+	<LinearLayout
+	    android:id="@+id/remindLinLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal">
+		
+	    <TextView
+	        android:id="@+id/remainderText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/time_button"
+	        android:layout_toLeftOf="@+id/addNotificationType"
+	        android:layout_toRightOf="@+id/time_button"
+	        android:gravity="left"
+	        android:text="Reminder: "
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    
+	    <Button
+	        android:id="@+id/notifyDate"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Date" />
+
+	    <Button
+	        android:id="@+id/notifyTime"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_toRightOf="@+id/date_button"
+	        android:text="Time" />
+
+		<TextView
+	        android:id="@+id/repeatText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/time_button"
+	        android:layout_toLeftOf="@+id/addNotificationType"
+	        android:layout_toRightOf="@+id/time_button"
+	        android:gravity="left"
+	        android:text="Repeat: "
+	        android:visibility="gone"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+		<LinearLayout 
+		    android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:gravity="center_horizontal"
+	        android:paddingTop="5dp"
+	        >
+	    <Spinner
+	        android:id="@+id/repeat"
+	        style="@style/spinner_style"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:gravity="center_horizontal"
+	        android:spinnerMode="dropdown" 
+	        android:visibility="gone"/>
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	<!--  </ListView>-->
+        
+    </LinearLayout>
+
+	<LinearLayout
+	    android:id="@+id/mainNoteDataLinLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:padding="8dp">
+
+		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+
+			<Button
+			    android:id="@+id/browseContacts"
+			    style="?android:attr/buttonStyleSmall"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:text="InsertContacts" />
+
+			<TextView
+			    android:id="@+id/noteDataText"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:paddingLeft="8dp"
+			    android:text="Notes :"
+			    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+			<Button
+			    android:id="@+id/browseEmail"
+			    style="?android:attr/buttonStyleSmall"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentTop="true"
+			    android:layout_toLeftOf="@+id/browseContacts"
+			    android:text="InsertEmail" />
+
+		</RelativeLayout>
+
+    <EditText
+        android:id="@+id/noteData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ems="10" 
+        android:singleLine="false"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edit"
+        android:padding="8dp">
+		
+    </EditText>
+    
+    </LinearLayout>
+    
+</LinearLayout>
+<LinearLayout
+        android:id="@+id/viewMainLinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:id="@+id/viewDateRelLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal">
+    		<TextView
+            android:id="@+id/viewCreatedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:text="created"
+            android:textAppearance="?android:attr/textAppearanceSmall" >
+        	</TextView>
+
+        	<TextView
+            android:id="@+id/viewModified_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:text="modified"
+            android:gravity="right"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </RelativeLayout>
+        
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/viewTitleLinLayout">
+
+        <TextView
+            android:id="@+id/viewNoteTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Title:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/viewNoteTitle"
+            android:paddingLeft="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:ems="10" 
+            android:background="@drawable/edit"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textAppearance="?android:attr/textAppearanceMedium">
+          
+        </TextView>
+        
+    </LinearLayout>
+    
+
+	    <TextView
+	        android:id="@+id/viewNoteTagsText"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="0.19"
+	        android:gravity="center_horizontal"
+	        android:text="Tag It: NO Tag"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+    </LinearLayout>
+	
+	
+
+	<!--<ListView
+	    android:id="@+id/textViewNotification"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent" >-->
+
+		
+	    <TextView
+	        android:id="@+id/viewRemainderText"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/time_button"
+	        android:gravity="center_horizontal"
+	        android:text="Reminder: yyyy/mm/dd hh:mm "
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	    
+
+
+	<LinearLayout
+	    android:id="@+id/viewMainNoteDataLinLayout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/viewNoteDataText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes:"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:paddingLeft="8dp"/>
+
+    <TextView
+        android:id="@+id/viewNoteData"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:ems="10" 
+        android:autoLink="all"
+        android:singleLine="false"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:paddingLeft="8dp"
+        android:background="@drawable/edit"
+        android:textAppearance="?android:attr/textAppearanceMedium">
+		
+    </TextView>
+    
+    </LinearLayout>
+</LinearLayout>

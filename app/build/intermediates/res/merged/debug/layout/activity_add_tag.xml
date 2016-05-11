@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <TextView 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:id="@+id/noteTagDesc"
+        	android:text="you can only add new tags that are not on below list"
+        	android:paddingLeft="20dp"
+        	android:paddingRight="20dp"
+        	android:paddingTop="4dp"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:gravity="center_horizontal"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/addTagText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Tag : "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/addTagEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:background="@drawable/edit"/>
+
+        <Button
+            android:id="@+id/addTag"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/updateTagText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update : "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Spinner
+            android:id="@+id/allNoteTagsSpinner"
+            style="@style/spinner_style"
+            android:layout_width="72dp"
+            android:layout_height="40dp"
+            android:spinnerMode="dropdown"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/updateTagEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" 
+            android:background="@drawable/edit"/>
+
+        <Button
+            android:id="@+id/updateTag"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update" />
+
+    </LinearLayout>
+    
+		
+    	<TextView 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:id="@+id/noteTagDeleteDesc"
+        	android:text="To delete a Tag along with its notes, long press on Tag Name from below List."
+        	android:paddingLeft="20dp"
+        	android:paddingRight="20dp"
+        	android:paddingBottom="4dp"
+        	android:textAppearance="?android:attr/textAppearanceSmall"
+        	android:gravity="center_horizontal"/>	
+    
+        <TextView 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:id="@+id/allNoteTagsText"
+        	android:text="All Note Tags :"
+        	android:paddingLeft="20dp"
+        	android:paddingBottom="4dp"
+        	android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp">
+        <ListView 
+        android:id="@+id/allNoteTags"
+        android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/edit"
+		android:textAppearance="?android:attr/textAppearanceMedium">       
+    	</ListView>
+
+     </LinearLayout>
+
+</LinearLayout>

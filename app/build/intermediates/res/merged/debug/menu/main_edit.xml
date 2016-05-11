@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/action_save"
+        android:title="@string/action_save"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_content_save_white"/>
+    <item
+        android:id="@+id/action_delete"
+        android:title="@string/action_delete"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_delete_white"/>
+    <item
+        android:id="@+id/action_edit"
+        android:title="@string/action_edit"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_content_create_white"/>
+
+</menu>
